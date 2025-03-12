@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロフィール</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #eceff1, #cfd8dc);
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            font-size: 24px;
+            margin-top: 25px;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+        }
+        p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #1d68a7;
+        }
+        .highlight {
+            background: #ffeb3b;
+            padding: 3px 6px;
+            border-radius: 5px;
+        }
+        .banner {
+            margin-top: 40px;
+            text-align: center;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .banner img {
+            max-width: 220px;
+            transition: transform 0.3s ease;
+        }
+        .banner img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>プロフィール</h1>
+        
+        <h2>基本情報</h2>
+        <p><strong>名前:</strong>[CENSORED]</p>
+        <p><strong>居住地:</strong> 日本・大分市</p>
+        <p><strong>興味関心:</strong> SCP財団、スプラトゥーン、火山</p>
+        <p><strong>好きな火山:</strong> 鶴見岳・伽藍岳。<br>これらの火山は、美しい景観と独自の地質学的特徴を持ち、観察するたびに新たな発見がある。</p>
+        <p><strong>性的指向:</strong> バイセクシュアル。性別に関わらず、個人の魅力や価値観に惹かれる。</p>
+        <p><strong>特性:</strong> ASD（自閉スペクトラム症）持ち。特定の分野に深く没頭し、細部にこだわる傾向がある。</p>
+        
+        <h2>思想・価値観</h2>
+        <p><strong>思想:</strong> 社会民主主義を信じ、知識と学問を重視する。伝統を大切にしながらも、実用性・革新性のある考え方を最優先する。</p>
+        <p><strong>ソフトウェア哲学:</strong> 自由ソフトウェアを支持し、オープンソースの価値を重んじる。知識や技術は共有されるべきものと考える。</p>
+        <p><strong>フォロー方針:</strong> 基本的にフォローバックを行うが、価値観が著しく異なる場合は例外とする。</p>
+       
+        <h2>好きなもの・趣味</h2>
+        <p><strong>SCP財団:</strong> SCPに興味あり。好きな作品は<a href="http://scp-jp.wikidot.com/scp-3000-jp">SCP-3000-JP "常世の国"</a></p>
+        <p><strong>スプラトゥーン:</strong> 戦略的なプレイを重視し、チームプレイを楽しむ。特にシューター系の武器を使うことが多い。</p>
+        <p><strong>火山研究:</strong> 火山の成り立ちや噴火のメカニズムに興味を持ち、地質学的観点から深く学ぶ。</p>
+        <p><strong>読書:</strong> 科学・歴史・哲学関連の本をよく読み、知識を深めることを楽しむ。ハッカーと画家、1984年が一番好き。</p>
+        
+        <div class="banner">
+            <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">
+                <img src="https://licensebuttons.net/p/zero/1.0/88x31.png" alt="CC0 Logo">
+            </a>
+            <p>このページの内容は <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Universal (Public Domain Dedication)</a> のもとで公開されています。</p>
+        </div>
+    </div>
+</body>
+</html>
+
