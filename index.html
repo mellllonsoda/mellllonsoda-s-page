@@ -3,112 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プロフィール</title>
+    <title>めろんそーだのページ</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-        
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #eceff1, #cfd8dc);
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
             margin: 0;
-            padding: 40px 20px;
+            padding: 0;
+            overflow-x: hidden; /* 横スクロール防止 */
+        }
+
+        header {
+            background: linear-gradient(135deg, #0288d1, #66bb6a);
+            padding: 20px;
             text-align: center;
+            color: white;
+            animation: fadeIn 2s ease-out;
         }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-            max-width: 800px;
-            margin: auto;
-            text-align: left;
-            animation: fadeIn 1.5s ease-in-out;
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: slideIn 1s ease-out;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+
+        header h2 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            font-weight: normal;
+            animation: slideIn 2s ease-out;
         }
-        h1 {
-            color: #2c3e50;
-            font-size: 32px;
+
+        section {
+            padding: 40px;
             text-align: center;
-            border-bottom: 3px solid #2c3e50;
-            padding-bottom: 10px;
+            opacity: 0;
+            animation: fadeUp 2s forwards;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* アニメーション追加 */
         }
-        h2 {
-            color: #34495e;
-            font-size: 24px;
-            margin-top: 25px;
-            border-left: 5px solid #3498db;
-            padding-left: 10px;
+
+        .section-title {
+            color: #0288d1;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            animation: bounceIn 1s ease-out;
         }
-        p {
-            color: #555;
-            line-height: 1.8;
-            font-size: 18px;
+
+        .about, .skills, .contact, .challenge {
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: scale(0)a {
+color:#F00;
+} ;
+            animation: popIn 0.8s ease-out forwards;
         }
-        a {
-            color: #3498db;
+
+        .about p, .skills p, .contact p, .challenge p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            animation: bounceIn 2s ease-out;
+        }
+
+        .social-links a {
+            color: #0288d1;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s ease;
+            margin: 0 10px;
+            position: relative;
+            animation: floatIn 1.5s ease-out;
         }
-        a:hover {
-            color: #1d68a7;
-        }
-        .highlight {
-            background: #ffeb3b;
-            padding: 3px 6px;
-            border-radius: 5px;
-        }
-        .banner {
-            margin-top: 40px;
-            text-align: center;
-            animation: slideIn 1.5s ease-in-out;
-        }
-        @keyframes slideIn {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .banner img {
-            max-width: 220px;
-            transition: transform 0.3s ease;
-        }
-        .banner img:hover {
+
+        .social-links a:hover {
+            text-decoration: underline;
             transform: scale(1.1);
         }
+
+        footer {
+            background-color: #0288d1;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* アニメーションの定義 */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes floatIn {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* セクションにホバー時のアニメーション */
+        section:hover {
+            transform: scale(1.05); /* 少し大きくする */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* ボックスシャドウを追加 */
+        }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>プロフィール</h1>
-        
-        <h2>基本情報</h2>
-        <p><strong>名前:</strong>[CENSORED]</p>
-        <p><strong>居住地:</strong> 日本・大分市</p>
-        <p><strong>興味関心:</strong> SCP財団、スプラトゥーン、火山</p>
-        <p><strong>好きな火山:</strong> 鶴見岳・伽藍岳。<br>これらの火山は、美しい景観と独自の地質学的特徴を持ち、観察するたびに新たな発見がある。</p>
-        <p><strong>性的指向:</strong> バイセクシュアル。性別に関わらず、個人の魅力や価値観に惹かれる。</p>
-        <p><strong>特性:</strong> ASD（自閉スペクトラム症）持ち。特定の分野に深く没頭し、細部にこだわる傾向がある。</p>
-        
-        <h2>思想・価値観</h2>
-        <p><strong>思想:</strong> 社会民主主義を信じ、知識と学問を重視する。伝統を大切にしながらも、実用性・革新性のある考え方を最優先する。</p>
-        <p><strong>ソフトウェア哲学:</strong> 自由ソフトウェアを支持し、オープンソースの価値を重んじる。知識や技術は共有されるべきものと考える。</p>
-        <p><strong>フォロー方針:</strong> 基本的にフォローバックを行うが、価値観が著しく異なる場合は例外とする。</p>
-       
-        <h2>好きなもの・趣味</h2>
-        <p><strong>SCP財団:</strong> SCPに興味あり。好きな作品は<a href="http://scp-jp.wikidot.com/scp-3000-jp">SCP-3000-JP "常世の国"</a></p>
-        <p><strong>スプラトゥーン:</strong> 戦略的なプレイを重視し、チームプレイを楽しむ。特にシューター系の武器を使うことが多い。</p>
-        <p><strong>火山研究:</strong> 火山の成り立ちや噴火のメカニズムに興味を持ち、地質学的観点から深く学ぶ。</p>
-        <p><strong>読書:</strong> 科学・歴史・哲学関連の本をよく読み、知識を深めることを楽しむ。ハッカーと画家、1984年が一番好き。</p>
-        
-        <div class="banner">
-            <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">
-                <img src="https://licensebuttons.net/p/zero/1.0/88x31.png" alt="CC0 Logo">
-            </a>
-            <p>このページの内容は <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Universal (Public Domain Dedication)</a> のもとで公開されています。</p>
+    <header>
+        <h1>火山王 めろんそーだ</h1>
+        <h2>火山とSCP、自由ソフトウェアを偏愛する13歳</h2>
+    </header>
+
+    <!-- 自己紹介セクション -->
+    <section class="about">
+        <img src="profile.jpg" alt="プロフィール画像" class="profile-image">
+        <div class="section-title">自己紹介</div>
+        <p>こんにちは！大分市に住む13歳の、火山とSCP、そしてプログラミングが大好きなめろんそーだです。鶴見岳や伽藍岳に心を奪われています。</p>
+        <p>現在は、Javaを中心にプログラミングを学んでおり、将来的にはオープンソースプロジェクトに参加したいと考えています。</p>
+    </section>
+
+    <!-- 火山学の興味 -->
+    <section class="about">
+        <div class="section-title">火山学への興味</div>
+        <p>私の好きな火山は鶴見岳と伽藍岳です。これらの火山に関する知識を深めることがライフワークとなっています。</p>
+    </section>
+
+    <!-- SCPへの興味 -->
+    <section class="about">
+        <div class="section-title">SCPへの興味</div>
+        <p>SCP財団が好きです。<a href="http://scp-jp.wikidot.com/scp-3000-jp">SCP-3000-JP "常世の国"</a>がお気に入りの作品です。</p>
+    </section>
+
+    <!-- プログラミングの勉強中 -->
+    <section class="skills">
+        <div class="section-title">プログラミングの勉強中</div>
+        <p>現在、私はJavaを、基本的な文法からオブジェクト指向プログラミングの概念まで、日々学んでいます。また、将来的にはオープンソースプロジェクトに参加し、実践的な開発スキルを向上させたいと考えています。</p>
+    </section>
+
+    <!-- 使用ツールと技術 -->
+    <section class="skills">
+        <div class="section-title">使用ツールと技術</div>
+        <p>主にNanoとVScodeを使用しています。VimやEmacsを使えるガチハッカーではざんねんながらありません</p>
+    </section>
+
+    <!-- 趣味・ライフスタイル -->
+    <section class="about">
+        <div class="section-title">趣味・ライフスタイル</div>
+        <p>自然が好きで、特に火山に興味を持っています。大分市内から鶴見岳・伽藍岳の写真をよく撮影しています。</p>
+    </section>
+
+    <!-- 個人的な挑戦（女装） -->
+    <section class="challenge">
+        <div class="section-title">女装</div>
+        <p>最近、はるかぜさん<a href="https://x.com/spring_dot_run">(X:@spring_dot_run)</a>に影響を受け、女装の準備を進めています。</p>
+        <p>はるさんかわいい</p>
+    </section>
+
+    <!-- 連絡先 -->
+    <section class="contact">
+        <div class="section-title">連絡先</div>
+        <p>私に連絡したい場合は、以下のリンクからご連絡ください：</p>
+        <div class="social-links">
+            <a href="https://twitter.com/mellllonsoda" target="_blank">Twitter (@mellllonsoda)</a>
         </div>
-    </div>
+    </section>
+
+    <footer>
+        <p>&🄯2025 mellllonsoda. All rights are waived.</p>
+    </footer>
 </body>
 </html>
 
