@@ -1,0 +1,14 @@
+.interface-control-button {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: block;
+  margin: auto 0;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.interface-control-button:active {
+  background-color: var(--accent-color1);
+  transition: background-color 0ms 0ms ease;
+}

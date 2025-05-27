@@ -1,261 +1,218 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en" class="white-mode">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>めろんそーだのページ</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #e0f7fa;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden; /* 横スクロール防止 */
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            background: linear-gradient(135deg, #0288d1, #66bb6a);
-            padding: 20px;
-            text-align: center;
-            color: white;
-            animation: fadeIn 2s ease-out;
-        }
+  <link rel="shortcut icon" href="./assets/melon.svg" type="image/x-icon">
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            animation: slideIn 1s ease-out;
-        }
+  <title>めろんちゃん🍈</title>
 
-        header h2 {
-            margin-top: 10px;
-            font-size: 1.5em;
-            font-weight: normal;
-            animation: slideIn 2s ease-out;
-        }
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
-        section {
-            padding: 40px;
-            text-align: center;
-            opacity: 0;
-            animation: fadeUp 2s forwards;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* アニメーション追加 */
-        }
-
-        .section-title {
-            color: #0288d1;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            animation: bounceIn 1s ease-out;
-        }
-
-        .about, .skills, .contact, .challenge, .mutual-link {
-            background-color: #ffffff;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transform: scale(0)a {
-color:#F00;
-} ;
-            animation: popIn 0.8s ease-out forwards;
-        }
-
-        .about p, .skills p, .contact p, .challenge p {
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-        
-
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            animation: bounceIn 2s ease-out;
-        }
-
-        .social-links a {
-            color: #0288d1;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 10px;
-            position: relative;
-            animation: floatIn 1.5s ease-out;
-        }
-
-        .social-links a:hover {
-            text-decoration: underline;
-            transform: scale(1.1);
-        }
-
-        footer {
-            background-color: #0288d1;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            animation: fadeIn 2s ease-out;
-        }
-
-        /* アニメーションの定義 */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideIn {
-            0% {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes bounceIn {
-            0% {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            50% {
-                transform: scale(1.2);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        @keyframes popIn {
-            0% {
-                transform: scale(0);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        @keyframes floatIn {
-            0% {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* セクションにホバー時のアニメーション */
-        section:hover {
-            transform: scale(1.05); /* 少し大きくする */
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* ボックスシャドウを追加 */
-        }
-
-    </style>
+  <!-- local css -->
+  <link rel="stylesheet" href="root.css">
 </head>
 <body>
-    <header>
+
+  <div id="grid-container">
+    <section id="sidebar-nav">
+      <header id="section-header-profile">
+        <span class="nav-profile-title">めろんちゃん🍈</span>
+        <img class="interface-control-button" src="./assets/icons/close.svg" onclick="toggleSidebar('sidebar-nav', 0)" alt="Close sidebar">
+      </header>
+
+      <header class="nav-profile">
+        <a href="https://github.com/mellllonsoda" target="_blank">
+          <img src="https://avatars.githubusercontent.com/u/202966709?v=4" alt="Melon's picture profile">
+          <div>
+            <span class="nav-profile-title">めろんちゃん🍈</span> 
+          </div>
+        </a>
+      </header>
+
+      <nav class="nav-content">
+        <button onclick="highlight('about')">
+          <span>自己紹介</span>
+        </button>
+
+        <button onclick="highlight('volcanology')">
+          <span>火山学への興味</span>
+        </button>
+
+        <button onclick="highlight('SCP')">
+          <span>SCPへの興味</span>
+        </button>
+
+        <button onclick="highlight('development')">
+          <span>プログラミングの勉強中</span>
+        </button>
+
+        <button onclick="highlight('tools')">
+          <span>使用ツールと技術</span>
+        </button>
+
+        <button onclick="highlight('hobbies')">
+          <span>趣味・ライフスタイル</span>
+        </button>
+
+        <button onclick="highlight('contact-me')">
+          <span>連絡先</span>
+        </button>
+
+        <button onclick="highlight('links-1')">
+          <span>相互リンク</span>
+        </button>
+
+        <button onclick="highlight('link-2')">
+          <span>一方通行リンク</span>
+        </button>
+        
+        <button onclick="toggleTheme(this)">
+          <span>テーマ変更</span>
+        </button>
+      </nav>
+
+      <footer style="margin-top: 1rem"><span>© 2025 mellllonsoda. All rights not reserved. ww</span></footer>
+    </section>
+
+    <article id="data-container">
+      <header id="section-header">
+        <img class="interface-control-button" src="./assets/icons/menu.svg" onclick="toggleSidebar('sidebar-nav', 1)" alt="Open sidebar">
+        <img class="interface-control-button" src="./assets/icons/back.svg" onclick="toggleSidebar('sidebar-social', 1)" alt="Open sidebar">
+      </header>
+
+      <div id="main-title">
         <h1>火山王 めろんそーだ</h1>
-        <h2>火山とSCP、自由ソフトウェアを偏愛する13歳</h2>
-    </header>
+      </div>
 
-    <!-- 自己紹介セクション -->
-    <section class="about">
-        <img src="profile.jpg" alt="プロフィール画像" class="profile-image">
-        <div class="section-title">自己紹介</div>
-        <p>こんにちは！大分市に住む13歳の、火山とSCP、そしてプログラミングが大好きなめろんそーだです。鶴見岳や伽藍岳に心を奪われています。</p>
-        <p>現在は、Javaを中心にプログラミングを学んでおり、将来的にはオープンソースプロジェクトに参加したいと考えています。</p>
-    </section>
-
-    <!-- 火山学の興味 -->
-    <section class="about">
-        <div class="section-title">火山学への興味</div>
-        <p>私の好きな火山は鶴見岳と伽藍岳です。これらの火山に関する知識を深めることがライフワークとなっています。</p>
-    </section>
-
-    <!-- SCPへの興味 -->
-    <section class="about">
-        <div class="section-title">SCPへの興味</div>
-        <p>SCP財団が好きです。<a href="http://scp-jp.wikidot.com/scp-3000-jp">SCP-3000-JP "常世の国"</a>がお気に入りの作品です。</p>
-    </section>
-
-    <!-- プログラミングの勉強中 -->
-    <section class="skills">
-        <div class="section-title">プログラミングの勉強中</div>
-        <p>現在、私はJavaを、基本的な文法からオブジェクト指向プログラミングの概念まで、日々学んでいます。また、将来的にはオープンソースプロジェクトに参加し、実践的な開発スキルを向上させたいと考えています。</p>
-    </section>
-
-    <!-- 使用ツールと技術 -->
-    <section class="skills">
-        <div class="section-title">使用ツールと技術</div>
-        <p>主にNanoとVScodeを使用しています。VimやEmacsを使えるガチハッカーではざんねんながらありません</p>
-    </section>
-
-    <!-- 趣味・ライフスタイル -->
-    <section class="about">
-        <div class="section-title">趣味・ライフスタイル</div>
-        <p>自然が好きで、特に火山に興味を持っています。大分市内から鶴見岳・伽藍岳の写真をよく撮影しています。</p>
-    </section>
-
-    <!-- 連絡先 -->
-    <section class="contact">
-        <div class="section-title">連絡先</div>
-        <p>私に連絡したい場合は、以下のリンクからご連絡ください：</p>
-        <div class="social-links">
-            <a href="https://twitter.com/mellllonsoda" target="_blank">Twitter (@mellllonsoda)</a>
+      <main>
+        <div id="main-title-desktop">
+          <h1>火山王 めろんそーだ</h1>
+          <h3>火山とSCP、自由ソフトウェアを偏愛する13歳</h3>
         </div>
-    </section>
 
-    <section class="mutual-link">
-        <div class="section-title">相互リンク</div>
-        <p></p>
-        <div class="social-links">
-            <p>"産廃は私の命。(Nicoさん)"<a href="https://t.co/t9y6NLv085" target="_blank">Nico site</a></p>
-            <p>"プシューサービスのホームへようこそ。(プシューわんこ/ (阿部勇生)さん)"<a href="http://pusyuuwanko.com" target="_blank">プシューサービス</a></p>
-            <p>"はるかぜが吹く部屋へようこそ（はるかぜさん）"<a href="https://haru-kaze.f5.si/" target="_blank">はるかぜが吹く部屋</a>(ダウン中)</p>
-            <p>"プロフィールオンリー（彩音さん）"<a href=https://ayane0857.net/" target="_blank">彩音のてきとーなサイト</a></p>
-            <p>"サーバー建てました。(ATShiftさん)"<a href="https://global.atserver186.jp/index.html" target="_blank">ATSERVER</a></p>
-            <p>"暇だからHPつくってみたお♨(kaeru(Re:turn)さん)"<a href="https://www.kaerubasyo.com/" target="_blank">kaeruの帰ル場所</a></p>
-            <p>"ようこそいらっしゃいませ。(鮭冬葉さん)"<a href="https://shakekirehashi.netlify.app/" target="_blank">shaketoba's site</a></p>
-            <p>"なにもないです(Ramuneさん)"<a href="http://ramuneserver323.f5.si/" target="_blank">ramune23のクソサイト</a></p>
-            
-        </div>
-    </section>
-        <section class="mutual-link">
-        <div class="section-title">一方通行リンク</div>
-        <p></p>
-        <div class="social-links">
-            <p>"電気代がやばい中学生の自宅サーバー(Link2011さん)"<a href="https://linkserver.jp/" target="_blank">Linkserver</a></p>
-        </div>
-    </section>
+        <h3 style="text-align: center; margin-bottom: 4rem;" id="special-subtitle">火山とSCP、自由ソフトウェアを偏愛する13歳</h3>
 
-    <footer>
-        <p>&🄯2025 mellllonsoda. All rights are waived.This site is link free.</p>
-    </footer>
+        <section data-highlight="about">
+          <h2>自己紹介</h2>
+
+          <p>
+            こんにちは！大分市に住む13歳の、火山とSCP、そしてプログラミングが大好きなめろんそーだです。鶴見岳や伽藍岳に心を奪われています。
+          </p>
+          
+          <p>
+            現在、私はJavaを中心にプログラミングを学んでおり、また、ウェブ開発も学んでいます。将来的には、オープンソースプロジェクトに参加したいと考えています。
+          </p>
+   
+        </section>
+
+        <section data-highlight="volcanology">
+          <h2>火山学への興味</h2>
+
+          <p>
+            私の好きな火山は鶴見岳と伽藍岳です。これらの火山に関する知識を深めることがライフワークとなっています。
+          </p>
+
+        </section>
+
+        <section data-highlight="SCP">
+          <h2>SCPへの興味</h2>
+
+          <p>SCP財団が好きです。<a href="http://scp-jp.wikidot.com/scp-3000-jp" target="_blank">SCP-3000-JP "常世の国"</a>がお気に入りの作品です。</p>
+        </section>
+
+        <section data-highlight="development">
+          <h2>プログラミングの勉強中</h2>
+
+          <p>現在、私はJavaを中心に、基本的な文法からオブジェクト指向プログラミングの概念まで学んでおり、また、ウェブ開発も学んでいます。将来的には、オープンソースプロジェクトに参加し、実践的な開発スキルを向上させたいと考えています。</p>
+        </section>
+
+        <section data-highlight="tools">
+          <h2>使用ツールと技術</h2>
+
+          <p>主にNanoとVScodeを使用しています。VimやEmacsを使えるガチハッカーではざんねんながらありません</p>
+        </section>
+
+        <section data-highlight="hobbies">
+          <h2>趣味・ライフスタイル</h2>
+
+          <p>自然が好きで、特に火山に興味を持っています。大分市内から鶴見岳・伽藍岳の写真をよく撮影しています。</p>
+        </section>
+
+        <section data-highlight="contact-me">
+          <h2>連絡先</h2>
+
+          <p style="display: flex;">私に連絡したい場合は、以下のリンクからご連絡ください：</p>
+          <div>
+            <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://t.co/KsbxIdgKys">https://t.co/KsbxIdgKys</a><br>相互リンクやりませんかぁ</p>&mdash; 火山王めろんそーだ（アツアツな大分県民bot）/鶴見岳・伽藍岳推し (@mellllonsoda) <a href="https://twitter.com/mellllonsoda/status/1900891830260298186?ref_src=twsrc%5Etfw">March 15, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </section>
+
+        <section data-highlight="links-1">
+          <h2>相互リンク</h2>
+
+          <ul>
+            <li>
+                <p>産廃は私の命。(Nicoさん) 
+                    <a href="https://t.co/t9y6NLv085" target="_blank">Nico site</a>
+                </p>
+            </li>
+            <li>
+                <p>プシューサービスのホームへようこそ。(プシューわんこ/ (阿部勇生)さん) 
+                    <a href="http://pusyuuwanko.com" target="_blank">プシューサービス</a>
+                </p>
+            </li>
+            <li>
+                <p>はるかぜが吹く部屋へようこそ（はるかぜさん） 
+                    <a href="https://haru-kaze.f5.si/" target="_blank">はるかぜが吹く部屋</a>
+                </p>
+            </li>
+            <li>
+                <p>プロフィールオンリー（彩音さん） 
+                    <a href="https://ayane0857.net/" target="_blank">彩音のてきとーなサイト</a>
+                </p>
+            </li>
+            <li>
+                <p>サーバー建てました。(ATShiftさん) 
+                    <a href="https://global.atserver186.jp/index.html" target="_blank">ATSERVER</a>
+                </p>
+            </li>
+            <li>
+                <p>暇だからHPつくってみたお♨(kaeru(Re:turn)さん) 
+                    <a href="https://www.kaerubasyo.com/" target="_blank">kaeruの帰ル場所</a>
+                </p>
+            </li>
+        </ul>
+        </section>
+
+        <section data-highlight="link-2">
+          <h2>一方通行リンク</h2>
+
+          <p>"電気代がやばい中学生の自宅サーバー(Link2011さん)"<a href="https://linkserver.jp/" target="_blank">Linkserver</a></p>
+        </section>
+      </main>
+    </article>
+
+    <section id="sidebar-social">
+      <a href="https://github.com/mellllonsoda" target="_blank">
+        <img src="./assets/icons/github.svg" alt="Go to melon's GitHub profile">
+      </a>
+      <a href="mailto:mellllonsoda0419@gmail.com" target="_blank">
+        <img src="./assets/icons/at.svg" alt="Send an email to melon">
+      </a>
+      <a href="https://mellllonsoda.github.io/mellllonsoda-s-page/" target="_blank">
+        <img src="./assets/icons/web.svg" alt="Go to melon's website">
+      </a>
+    </section>
+  </div>
+
+  <!-- local js -->
+  <script src="./sidebar.js"></script>
+  <script src="./themes.js"></script>
+  
 </body>
 </html>
