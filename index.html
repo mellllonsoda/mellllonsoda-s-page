@@ -1,228 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" class="white-mode">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="shortcut icon" href="./assets/melon.svg" type="image/x-icon">
-
-  <title>めろんちゃん🍈</title>
-
-  <!-- google fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-
-  <!-- local css -->
-  <link rel="stylesheet" href="root.css">
+  <title>サイト移転のお知らせ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 3em;
+      line-height: 1.8;
+    }
+    a {
+      color: #0056b3;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .notice {
+      margin-top: 2em;
+      font-size: 1.1em;
+      color: #b30000;
+    }
+  </style>
 </head>
 <body>
+  <h1>サイト移転のお知らせ</h1>
+  <p>本サイトは新しいURLに移転しました。</p>
+  <p><a href="https://mellllonsoda-server.com">→ 新しいサイトはこちら</a></p>
+  <p><a href="https://mellllonsoda.github.io/mellllonsoda-s-page-old/">→ 旧サイトはこちら</a></p>
 
-  <div id="grid-container">
-    <section id="sidebar-nav">
-      <header id="section-header-profile">
-        <span class="nav-profile-title">めろんちゃん🍈</span>
-        <img class="interface-control-button" src="./assets/icons/close.svg" onclick="toggleSidebar('sidebar-nav', 0)" alt="Close sidebar">
-      </header>
-
-      <header class="nav-profile">
-        <a href="https://github.com/mellllonsoda" target="_blank">
-          <img src="https://avatars.githubusercontent.com/u/202966709?v=4" alt="Melon's picture profile">
-          <div>
-            <span class="nav-profile-title">めろんちゃん🍈</span> 
-          </div>
-        </a>
-      </header>
-
-      <nav class="nav-content">
-        <button onclick="highlight('about')">
-          <span>自己紹介</span>
-        </button>
-
-        <button onclick="highlight('volcanology')">
-          <span>火山学への興味</span>
-        </button>
-
-        <button onclick="highlight('SCP')">
-          <span>SCPへの興味</span>
-        </button>
-
-        <button onclick="highlight('development')">
-          <span>プログラミングの勉強中</span>
-        </button>
-
-        <button onclick="highlight('tools')">
-          <span>使用ツールと技術</span>
-        </button>
-
-        <button onclick="highlight('hobbies')">
-          <span>趣味・ライフスタイル</span>
-        </button>
-
-        <button onclick="highlight('contact-me')">
-          <span>連絡先</span>
-        </button>
-
-        <button onclick="highlight('links-1')">
-          <span>相互リンク</span>
-        </button>
-
-        <button onclick="highlight('link-2')">
-          <span>一方通行リンク</span>
-        </button>
-        
-        <button onclick="toggleTheme(this)">
-          <span>テーマ変更</span>
-        </button>
-      </nav>
-
-      <footer style="margin-top: 1rem"><span>© 2025 mellllonsoda. All rights not reserved. ww</span></footer>
-    </section>
-
-    <article id="data-container">
-      <header id="section-header">
-        <img class="interface-control-button" src="./assets/icons/menu.svg" onclick="toggleSidebar('sidebar-nav', 1)" alt="Open sidebar">
-        <img class="interface-control-button" src="./assets/icons/back.svg" onclick="toggleSidebar('sidebar-social', 1)" alt="Open sidebar">
-      </header>
-
-      <div id="main-title">
-        <h1>火山王 めろんそーだ</h1>
-      </div>
-
-      <main>
-        <div id="main-title-desktop">
-          <h1>火山王 めろんそーだ</h1>
-          <h3>火山とSCP、自由ソフトウェアを偏愛する13歳</h3>
-        </div>
-
-        <h3 style="text-align: center; margin-bottom: 4rem;" id="special-subtitle">火山とSCP、自由ソフトウェアを偏愛する13歳</h3>
-
-        <section data-highlight="about">
-          <h2>自己紹介</h2>
-
-          <p>
-            こんにちは！大分市に住む13歳の、火山とSCP、そしてプログラミングが大好きなめろんそーだです。鶴見岳や伽藍岳に心を奪われています。
-          </p>
-          
-          <p>
-            現在、私はJavaを中心にプログラミングを学んでおり、また、ウェブ開発も学んでいます。将来的には、オープンソースプロジェクトに参加したいと考えています。
-          </p>
-   
-        </section>
-
-        <section data-highlight="volcanology">
-          <h2>火山学への興味</h2>
-
-          <p>
-            私の好きな火山は鶴見岳と伽藍岳です。これらの火山に関する知識を深めることがライフワークとなっています。
-          </p>
-
-        </section>
-
-        <section data-highlight="SCP">
-          <h2>SCPへの興味</h2>
-
-          <p>SCP財団が好きです。<a href="http://scp-jp.wikidot.com/scp-3000-jp" target="_blank">SCP-3000-JP "常世の国"</a>がお気に入りの作品です。</p>
-        </section>
-
-        <section data-highlight="development">
-          <h2>プログラミングの勉強中</h2>
-
-          <p>現在、私はJavaを中心に、基本的な文法からオブジェクト指向プログラミングの概念まで学んでおり、また、ウェブ開発も学んでいます。将来的には、オープンソースプロジェクトに参加し、実践的な開発スキルを向上させたいと考えています。</p>
-        </section>
-
-        <section data-highlight="tools">
-          <h2>使用ツールと技術</h2>
-
-          <p>主にNanoとVScodeを使用しています。VimやEmacsを使えるガチハッカーではざんねんながらありません</p>
-        </section>
-
-        <section data-highlight="hobbies">
-          <h2>趣味・ライフスタイル</h2>
-
-          <p>自然が好きで、特に火山に興味を持っています。大分市内から鶴見岳・伽藍岳の写真をよく撮影しています。</p>
-        </section>
-
-        <section data-highlight="contact-me">
-          <h2>連絡先</h2>
-
-          <p style="display: flex;">私に連絡したい場合は、以下のリンクからご連絡ください：</p>
-          <div>
-            <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://t.co/KsbxIdgKys">https://t.co/KsbxIdgKys</a><br>相互リンクやりませんかぁ</p>&mdash; 火山王めろんそーだ（アツアツな大分県民bot）/鶴見岳・伽藍岳推し (@mellllonsoda) <a href="https://twitter.com/mellllonsoda/status/1900891830260298186?ref_src=twsrc%5Etfw">March 15, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div>
-        </section>
-
-        <section data-highlight="links-1">
-          <h2>相互リンク</h2>
-
-          <ul>
-            <li>
-                <p>産廃は私の命。(Nicoさん) 
-                    <a href="https://t.co/t9y6NLv085" target="_blank">Nico site</a>
-                </p>
-            </li>
-            <li>
-                <p>プシューサービスのホームへようこそ。(プシューわんこ/ (阿部勇生)さん) 
-                    <a href="http://pusyuuwanko.com" target="_blank">プシューサービス</a>
-                </p>
-            </li>
-            <li>
-                <p>はるかぜが吹く部屋へようこそ（はるかぜさん） 
-                    <a href="https://haru-kaze.f5.si/" target="_blank">はるかぜが吹く部屋</a>
-                </p>
-            </li>
-            <li>
-                <p>プロフィールオンリー（彩音さん） 
-                    <a href="https://ayane0857.net/" target="_blank">彩音のてきとーなサイト</a>
-                </p>
-            </li>
-            <li>
-                <p>サーバー建てました。(ATShiftさん) 
-                    <a href="https://global.atserver186.jp/index.html" target="_blank">ATSERVER</a>
-                </p>
-            </li>
-            <li>
-                <p>暇だからHPつくってみたお♨(kaeru(Re:turn)さん) 
-                    <a href="https://www.kaerubasyo.com/" target="_blank">kaeruの帰ル場所</a>
-                </p>
-            </li>
-            <li>
-                <p>
-                  電気代がやばい中学生の自宅サーバー(Link2011さん)
-                  <a href="https://linkserver.jp/" target="_blank">Linkserver</a></p>
-            <li>
-                <p>
-                  サーバー大好き！うまいだんごです！(うまいだんごさん)
-                  <a href="https://umaii.f5.si/" target="_blank">うまいだんご</a></p>
-            </li>
-            </li>
-        </ul>
-        </section>
-
-        <section data-highlight="link-2">
-          <h2>一方通行リンク</h2>
-
-          <p>現在なし</a></p>
-        </section>
-      </main>
-    </article>
-
-    <section id="sidebar-social">
-      <a href="https://github.com/mellllonsoda" target="_blank">
-        <img src="./assets/icons/github.svg" alt="Go to melon's GitHub profile">
-      </a>
-      <a href="mailto:mellllonsoda0419@gmail.com" target="_blank">
-        <img src="./assets/icons/at.svg" alt="Send an email to melon">
-      </a>
-      <a href="https://mellllonsoda.github.io/mellllonsoda-s-page/" target="_blank">
-        <img src="./assets/icons/web.svg" alt="Go to melon's website">
-      </a>
-    </section>
+  <div class="notice">
+    お手数ですが、このページをご覧になった方は<br>
+    ブックマークやリンクを更新していただけると幸いです。
   </div>
-
-  <!-- local js -->
-  <script src="./sidebar.js"></script>
-  <script src="./themes.js"></script>
-  
 </body>
 </html>
+
